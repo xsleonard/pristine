@@ -14,7 +14,7 @@
     <h3>{{ .Key | title }}</h3>
     {{ end }}
     <ul>
-        {{ range $.Site.RegularPages.ByDate }}
+        {{ range $.Site.RegularPages.ByDate.Reverse }}
         <li>
         <a href="{{ .Permalink }}">{{ .Title }}</a>
         <div class="meta">{{ .Date.Format "Mon, Jan 2, 2006" }}</div>
@@ -23,14 +23,13 @@
     </ul>
     {{ end }}
 
-
     {{ if isset .Site.Params "social" }}
         {{ partialCached "social.html" . }}
     {{ end }}
-  
+
   </div>
 
-  
+
 
 
 
