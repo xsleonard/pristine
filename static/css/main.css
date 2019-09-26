@@ -40,10 +40,6 @@ video {
     margin: 20px 5px;
 }
 
-code {
-    font-family: 'Source Code Pro', monospace;
-}
-
 .browserupgrade {
     margin: 0.2em 0;
     background: #ccc;
@@ -90,7 +86,8 @@ h3 {
 
 #main {
     left: 280px;
-    width: 500px;
+    width: 30%;
+    min-width: 500px;
 }
 #main h1 {
     margin-top: 0;
@@ -247,4 +244,14 @@ img.logo {
 .mfp-with-zoom.mfp-removing .mfp-container,
 .mfp-with-zoom.mfp-removing.mfp-bg {
   opacity: 0;
+}
+
+code {
+    font-family: 'Source Code Pro', monospace;
+    background-color: #f0f0f0;
+    white-space: pre;
+}
+
+code * {
+    font-family: 'Source Code Pro', monospace;
 }

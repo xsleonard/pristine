@@ -12,6 +12,7 @@
     {{end}}
   </ul>
 
+  {{ if not .Site.Params.disableRecentPosts }}
   <h2>Recent posts</h2>
   <ul>
     {{ $recentPosts := default 10 (.Site.Params.recentPosts) }}
@@ -21,11 +22,14 @@
       {{ end }}
     {{ end }}
   </ul>
+  {{ end }}
 
+  {{ if isset .Site.Menus "projects" }}
   <h2>Projects</h2>
   <ul>
     {{ range .Site.Menus.projects }}
       <li><a href="{{.URL}}" target="_blank">{{ .Name }}</li>
     {{end}}
   </ul>
+  {{ end }}
 </div>
